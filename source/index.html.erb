@@ -1,0 +1,48 @@
+<%= partial "header" %>
+<div class="bg-splash">
+	<div class="container">
+		<div class="wrapper-100 center">
+			<h1 class="heading">
+			Barnaby Clegg
+			</h1>
+			
+			<p class="b-intro">
+				Human, artist, musician, explorer, FrontEnd web developer by trade.
+			</p>
+		</div>
+
+		<div class="wrapper-container mobile-padding with-margin">
+
+			<a href="projects.html" class="wrapper-50 l-card bg-project">
+				<h2 class="l-title">Projects</h2>
+			</a>
+
+			<a href="cv.html" class="wrapper-50 l-card bg-cv">
+				<h2 class="l-title">CV</h2>
+			</a>
+
+		</div>
+<!-- 
+		<div class="wrapper-container mobile-padding with-margin">
+			<div class="wrapper-50 l-card">
+				<h2>Projects</h2>
+				<img src="assets/images/aa_code2.jpeg" alt="projects">
+			</div>
+			<div class="wrapper-50 l-card">
+				<h2>CV</h2>
+				<img src="assets/images/aa_cv1.jpeg" alt="cv">
+			</div>
+		</div> -->
+
+		<p class="footnote margin-bottom">Art and music sections coming soon...</p>
+
+	</div>
+</div><!-- end container -->
+<!--Helper to include scripts in the footer for this page only -->
+<% content_for :callScripts do %>
+<% end %>
+<!--Helper to include JQuery in the footer for this page only.
+Note: $(function() already called -->
+<% content_for :footerscriptsInline do %>
+<% end %>
+<%= partial "footer" %>

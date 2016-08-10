@@ -1,0 +1,46 @@
+</div><!-- end main-content-->
+<footer class="footer bg-main1">
+<div class="padded-content">
+	<div class="wrapper centered">
+
+			<h2>Contact</h2>
+
+			<p>
+				
+				<a href="mailto:barnabyclegg@live.co.uk" class="mail">
+				<img src="assets/images/icon-mail.svg" alt="email" class="icon-mail">
+				BarnabyClegg@live.co.uk
+				</a>
+			</p>
+
+		<div class="bottom-info">
+			<p class="copy">
+				© 2016. Barnaby Clegg.
+			</p>
+		</div>
+	</div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+
+<script>window.jQuery || document.write('<script src="assets/scripts/jquery-1.11.3.min.js"><\/script>')</script>
+
+<% if content_for?(:callScripts) %> 
+	<%= yield_content :callScripts %>
+<% end %>
+
+<!-- For any custom JS -->
+<script src="assets/scripts/custom.js?v=1.0" type="text/javascript"></script>
+
+<script>
+$(function() {
+	<% if content_for?(:footerscriptsInline) %> 
+	<%= yield_content :footerscriptsInline %>
+	<% end %>
+})
+</script>
+
+
+</body>
+</html>

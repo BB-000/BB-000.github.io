@@ -1,0 +1,476 @@
+/*Main CSS*/
+body {
+	font-family:$primaryFont;
+	line-height:1.4;
+	font-size:16px;
+	// color: whitesmoke;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Typograpghy Classes*/
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+	font-family:$primaryFont;
+	// font-family:$secondaryFont;
+	font-weight:300;
+} 
+
+h1, .h1 {
+	font-size: 50px;
+    line-height: 55px;
+	padding: $setSpacing*2 0;
+}
+
+h2, .h2 {
+	font-size: 34px;
+  	line-height: 38px;
+	padding:0 0 $setSpacing/2 0;
+}
+
+h3, .h3 {
+	font-size:26px;
+	padding:0 0 $setSpacing/2 0;
+}
+
+h4, .h4 {
+	font-size:20px;
+	padding:0 0 $setSpacing/2 0;
+}
+
+p, ul, ol {
+	padding:0 0 $setSpacing/2 0;
+	font-weight:300;
+}
+
+.heading {
+	padding-bottom: $setSpacing*2;
+	font-family: $snazzyFont;
+}
+
+.b-intro {
+	font-family: $snazzyFont;
+	font-size: 24px;
+}
+
+.float-right {
+	float:right;
+}
+
+.center {
+	text-align: center;
+}
+
+header {
+	background: $bg1;
+	width:100%;
+	// float: left;
+
+	.logo, .mainMenu {
+		padding: $setSpacing;
+	}
+}
+
+/*Form helpers*/
+::-webkit-input-placeholder {
+   color: #000;
+   opacity:1;
+}
+
+:-ms-input-placeholder { 
+  color: #000;
+  opacity:1;
+}
+
+::-ms-input-placeholder {  
+   color: #000;  
+   opacity:1;
+}
+
+::-moz-placeholder {
+	color: #000;  
+    opacity:1;
+}
+
+.logo {
+	float:left;
+	&.desktop {
+		display: none;
+		@include viewport(768) {
+			display: block;
+		}
+	}
+
+	&.mobile {
+		display: block;
+		@include viewport(768) {
+			display: none;
+		}
+	}
+
+	a {
+		padding: 0px;
+	}
+}
+
+#main-content {
+
+}
+
+.form-field-wrapper {
+	float:left;
+	width:100%;
+	margin-bottom:$setSpacing;
+
+	label {
+		float:left;
+		width:100%;
+		margin-bottom:2px;
+	}
+
+	input[type=text],
+	input[type=email],
+	input[type=password] {
+		width:100%;
+		box-sizing:border-box;
+		padding:$setSpacing/2;
+	}
+
+	button, input[type=submit] {
+		padding:$setSpacing/2;
+	}
+
+	&.placeholder-label label {
+		display:none;
+	}
+
+	@include viewport(768) {
+		label {
+			width:30%;
+			margin:$setSpacing/2 0;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=password] {
+		width:70%;
+		}
+
+		&.placeholder-label input[type=text],
+		&.placeholder-label input[type=email],
+		&.placeholder-label input[type=password] {
+			width:100%;
+		}
+	}
+
+	@include viewport(980) {
+		label {
+			width:20%;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=password] {
+		width:80%;
+		}
+	}
+}
+
+form {
+	margin:$setSpacing/2 0;
+}
+
+/*Elastic Videoes / Maps*/
+.item-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.item-container iframe,  
+.item-container object,  
+.item-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.background-colour .wrapper-100,
+.background-colour .wrapper-50,
+.background-colour .wrapper-33,
+.background-colour .wrapper-25,
+.background-colour .wrapper-66,
+.background-colour .wrapper-75 {
+	background-color:pink;
+}
+
+
+// scroll
+#animation {
+	text-align:center;
+}
+
+
+// SVG logo animations
+.svg-logo {
+	visibility: hidden;
+	cursor: pointer;		
+	// Stop flash of svg before page loads properly, show using JS
+	.no-js & {
+		visibility: visible;
+		cursor: default;
+	}
+}
+
+
+// SVG Drawing
+.drawings {
+	max-height: 600px;
+	position: relative;
+}
+
+.draw,
+.outline {
+	-webkit-transition: opacity 1.5s;
+	transition: opacity 1.5s;
+}
+
+.draw {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-height: 100%;
+	max-width: 100%;
+	// opacity: 0.5;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.show {
+    opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+
+.indent {
+	padding-left: $setSpacing*3;
+}
+
+
+// main
+
+// .ppad {
+// 	padding: $setSpacing;
+// }
+
+.bg-splash {
+	// background-image: url('../images/bg-stars.jpeg');
+	// background-size: cover;
+}
+
+
+//cv//
+
+.contact {
+	text-align: center;
+
+	p {
+		font-size: 18px;
+		&:first-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		&:hover {
+			color: #000000;
+
+		}
+	}
+}
+
+.skills ul {
+	margin-bottom: $setSpacing;
+}
+
+.cv {
+
+	padding: $setSpacing*2;
+
+	section {
+		// float: left;
+		width: 100%;
+		margin-bottom: $setSpacing;
+
+		p {
+			margin-bottom: $setSpacing;
+		}
+		ul {
+			margin-bottom: $setSpacing*2;
+		}
+	}
+
+	h3 {
+		color: $bloo;
+	}
+
+}
+
+.col-3 {
+	display: inline-block;
+
+	li {
+		float: left;
+		width: 100%;
+		list-style-position: inside;
+
+		@include viewport(740){
+			width: 50%;
+		}
+		@include viewport($desktop){
+			width: 33%;
+		}
+	}
+	&.md li {
+		@include viewport(600){
+			width: 50%;
+		}
+		@include viewport(800){
+			width: 33%;
+		}
+	}
+	
+}
+
+.hilite {
+	font-weight: 700;
+}
+
+.p-info {
+
+}
+
+.footnote {
+	text-align: center;
+	padding-top: $setSpacing*3;
+	clear: both;
+	// @include viewport($desktop){
+	// 	padding-top: $setSpacing*6;
+	// }
+}
+
+//////
+///////
+
+.l-card {
+	// padding-bottom: 25%;
+	position: relative;
+	height: 420px;
+	background-size: cover;
+	text-align: center;
+    text-decoration: none;
+
+	&:before {
+		opacity: 0.9;
+		background-color: darken($bg1, 25%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: "";
+		transition: all 0.3s;
+	}
+
+    &:hover {
+	    &:before {
+	    	opacity: 0.6;
+	    }
+	    & .l-title {
+			// background-color: #000000;
+			background-color: rgba(darken($bg1, 25%),0.6);
+	    }
+	}
+}
+
+.l-title {
+	position: relative;
+	color: white;
+    // background-color: rgba($bg1, 0.5);
+    width: auto;
+    // display: inline-block;
+    padding: 12px;
+    font-weight: 500;
+    margin-top: 160px;
+    transition: all 0.3s;
+}
+
+.bg-project {
+	background-image: url('../images/aa_code2.jpeg');
+}
+.bg-cv {
+	background-image: url('../images/aa_cv3.jpeg');
+}
+
+
+// projects
+/////////////
+
+.projects {
+	h1, h2, h3, .p-sub {
+		text-align: center;
+	}
+	.p-sub {
+		margin-bottom: $setSpacing;
+	}
+	p {
+		margin-bottom: $setSpacing/2;
+	}
+}
+
+.project {
+	margin-bottom: $setSpacing*2;
+}
+
+
+
+footer {
+	float:left;
+	width:100%;
+	text-align:center;
+	// position: absolute;
+	bottom: 0;
+
+	.mail {
+		color: #ffffff;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.icon-mail {
+		display: block;
+		margin: 0 auto;
+		width: 24px;
+	}
+}
+
+.copy {
+	font-size: 12px;
+	margin-top: $setSpacing*2;
+}
+

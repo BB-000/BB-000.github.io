@@ -1,0 +1,122 @@
+@mixin viewport($width) {
+  @if $mediaQueries {
+    @if unit($width) != px {
+      @media only screen and (min-width: $width + px) {@content;}
+    }
+    @else {
+      @media only screen and (min-width: $width) {@content;}
+    }
+  }
+  @else {
+      @content;
+  }
+}
+
+@mixin highDPI() {
+    @if $mediaQueries {
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+            @content;
+         }
+    } @else {}
+}
+
+//CSS Mixins
+@mixin flexBox() {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+}
+
+@mixin flexOrder($order) {
+-webkit-order: $order;
+    -ms-order: $order;
+        order: $order;
+}
+
+@mixin flexWrap() {
+-webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+@mixin flexAlign($position) {
+-webkit-align-items: $position;
+  -webkit-box-align: $position;
+     -ms-flex-align: $position;
+        align-items: $position;
+}
+
+
+
+
+@mixin cssTransform($transformProperty) {
+  -webkit-transform: $transformProperty; /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      -ms-transform: $transformProperty; /* IE 9 */
+          transform: $transformProperty; /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+@mixin cssGradient($hex1, $hex2, $gradientDirection:to bottom) {
+    background-color: $hex1; 
+    background: linear-gradient($gradientDirection, $hex1 0%, $hex2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$hex1}', EndColorStr='#{$hex2}')";
+}
+
+/*Fonts*/
+$snazzyFont: 'Pacifico', cursive;
+$primaryFont: 'Ubuntu', sans-serif;
+$secondaryFont: 'Ubuntu Condensed', sans-serif;
+
+/*Use these if using Google fonts where more than one property
+is required e.g. font-weight*/
+@mixin primaryFont() {
+  font-family: Arial, sans-serif;
+  font-weight:300;
+}
+
+@mixin secondaryFont() {
+  font-family: Georgia, Times, sans-serif;
+  font-weight:300;
+}
+
+/*Set Sizes*/
+$desktop: 1100px; /*Set container and desktop variable for media queries*/
+$setSpacing: 12px; /*Set global spacing*/
+
+/*Colours*/
+$c1: #240f27;
+
+$bg1: #59566b;
+
+$orange:#ff7b27;
+$red:#A80D02;
+$bloo:#2B8CD2;
+
+/*Universal Classes*/
+.primary-font {font-family:$primaryFont!important;}
+.secondary-font {font-family:$secondaryFont!important;}
+
+/*Use for embedding fonts*/
+/*@font-face {
+    font-family: 'fontname';
+    src: url('../fonts/fontname-webfont.eot');
+    src: url('../fonts/fontname-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontname-webfont.woff') format('woff'),
+         url('../fonts/fontname-webfont.ttf') format('truetype'),
+         url('../fonts/fontname-webfont.svg#akzidenz-grotesk_stdbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+.bg-main1 {
+  background: $c1;
+  h1, h2, h3, h4, h5, p, ul, ol {
+    color:#ffffff;
+  }
+}

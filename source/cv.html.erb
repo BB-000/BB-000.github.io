@@ -1,0 +1,101 @@
+<%= partial "header" %>
+<div class="container cv">
+		
+		<section class="contact">
+			<h2>Barnaby Clegg <br/><span>FrontEnd Web Developer</span></h2>
+			<p class="no-margin-bottom">Brighton, Sussex</p>
+			<p><a href="mailto:barnabyclegg@live.co.uk">BarnabyClegg@live.co.uk</a></p>
+		</section>
+
+		<section class="skills">
+			<h3>Skills</h3>
+			<ul class="col-3 md no-margin-bottom">
+				<li>Semantic HTML5</li>
+				<li>CSS / Sass</li>
+				<li>JavaScript ( vanilla &amp; JQuery )</li>
+				<li>SVG</li>
+				<li>Animation ( GSAP )</li>
+				<li>GitHub</li>
+				<li>Responsive design</li>
+				<li>Site-speed &amp; performance</li>
+				<li>Cross browser compatibility</li>
+				<li>Progressive Enhancement</li>
+				<li>W3C Standards &amp; Accessibility</li>
+				<li>CMS’s including Wordpress</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Work Experience</h3>
+			<h5 class="p-info"><span class="hilite">MBA Brighton,</span> July 2015 – Present :</h5>
+			<p>Currently working as Junior Front-End developer, where I work closely with the rest of the development team and project managers to produce and deliver high quality websites for clients. I work both on large existing codebases as well as starting new builds from scratch. I take pride in writing clean, semantic and reusable code, and when working on existing projects I make sure to integrate new solutions thoughtfully to keep the codebase manageable.</p>
+
+			<h6>Duties :</h6>
+			<ul class="indent">
+				<li>Building responsive, semantic HTML templates for a range of clients from given designs</li>
+				<li>Fixing bugs and issues on existing sites, using Zendesk and Trello to manage support tickets.</li>
+				<li>Cross browser / device testing, including IE8, using Browserstack, emulators and real devices </li>
+				<li>Ensuring site usability, performance, accessibility and SEO</li>
+				<li>Assisting in the planning phase of projects to look for possible solutions and making sure realistic technical parameters are put in place.</li>
+				<li>Providing estimates and technical details for project managers</li>
+				<li>Setting up and maintaining Google Analytics / Tag Manager for sites</li>
+				<li>Creating / editing assets in Photoshop and Illustrator </li>
+				<li>Working with the backend team to help integrate the solutions, including working with Visual Studio, C# and PHP.</li>
+				<li>Using various CMS’s ( Wordpress, Umbraco, Episerver ) for content entry and site changes</li>
+			</ul>
+
+			<h6>Live sites worked on :</h6>
+			<ul class="indent">
+				<li><a href="http://www.clickandinvest.com/">http://www.clickandinvest.com/</a></li>
+				<li><a href="http://www.ciras.org.uk/">http://www.ciras.org.uk/</a></li>
+				<li>
+					<a href="http://www.landmarktrust.org.uk/Search-and-book/">http://www.landmarktrust.org.uk</a>
+					<p>Created the updated booking calendar and styles.</p>
+				</li>
+			</ul>
+			
+			<h5 class="p-info"><span class="hilite">Muthastar Records,</span> Brighton, Summer 2014 :</h5>
+			<p>Had a wide range of duties such as accounting, contacting venues, setting up gigs, design tasks such as logos and screen printing, and helping with the website and newsletter. </p>
+			<h5 class="p-info"><span class="hilite">Goods Shed Ltd. Kent,</span> 2010 – 2012 :</h5>
+			<p>Manager of the fruit and veg stall. I had many responsibilities including ordering and collecting all of the produce. I gained experience managing people and also trained new staff to work at the stall.</p>
+		</section>
+		
+		<section>
+			<h3>Education</h3>
+
+			<h5 class="p-info">
+				<span class="hilite">University of Sussex,</span> Falmer. 2012 – 2015.
+			</h5>
+			<p class="result">Music Informatics BSc :	 2:1 — 67%</p>
+			<ul class="col-3">
+				<li>Web Computing: 75%</li>
+				<li>Further Programming: 77%</li>
+				<li>Introduction to Computer Systems: 80%</li>
+				<li>Databases: 67%</li>
+				<li>Machine Learning: 71%</li>
+				<li>E-Business and E-Commerce Systems: 68%</li>
+			</ul>
+
+			<h5 class="p-info"><span class="hilite">K College,</span> Folkestone, Kent. 2009 - 2011.</h5> 
+			<p class="result">Btec National Diploma Level 3: Music Technology – Triple Distinction</p>
+
+			<h5 class="p-info"><span class="hilite">Norton Knatchbull School,</span> Ashford, Kent. 2004 – 2009.</h5>
+			<p class="result">G.C.S.E's:  1 A*,  8 A,  3 B,  1 C</p>
+		</section>
+		<section>
+			<h3>Interests</h3>
+			<p>I enjoy all things artistic and creative. Some of my hobbies and interests include composing, playing and producing music, as well as visual art of all kinds, which I sometimes perform at events. I am interested in interactive software and enjoy programming games, audio-visual toys and generative art. I also have a big passion for wildlife, nature and the outdoors, and enjoy exploring and mountain biking. I also absolutely love food and experimenting in the kitchen.</p>
+		</section>
+
+		<p class="footnote">[ References available on request ]</p>
+		
+	
+	</div><!-- end container -->
+	<!--Helper to include scripts in the footer for this page only -->
+	<% content_for :callScripts do %>
+	<% end %>
+	<!--Helper to include JQuery in the footer for this page only.
+	Note: $(function() already called -->
+	<% content_for :footerscriptsInline do %>
+	<% end %>
+	<%= partial "footer" %>
