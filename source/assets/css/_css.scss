@@ -433,9 +433,6 @@ form {
 	h1, h2, h3, .p-sub {
 		text-align: center;
 	}
-	.p-sub {
-		margin-bottom: $setSpacing;
-	}
 	p {
 		margin-bottom: $setSpacing/2;
 	}
@@ -445,6 +442,10 @@ form {
 	margin-bottom: $setSpacing*2;
 }
 
+.p-sub {
+	margin-bottom: $setSpacing;
+	font-size: 18px;
+}
 
 
 footer {
