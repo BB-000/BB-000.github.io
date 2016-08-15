@@ -280,6 +280,16 @@ form {
 	// background-size: cover;
 }
 
+.p-link {
+	display: inline-block;
+	color: blue;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		color: #000000;
+	}
+}
+
 
 //cv//
 
@@ -439,12 +449,32 @@ form {
 }
 
 .project {
-	margin-bottom: $setSpacing*2;
+	margin-bottom: $setSpacing*4;
+
+	img {
+		margin-bottom: 24px;
+	    width: 750px;
+	    margin: 0 auto $setSpacing*2 auto;
+	    display: block;
+	}
 }
 
 .p-sub {
 	margin-bottom: $setSpacing;
 	font-size: 18px;
+	color: #000000;
+}
+
+.project-title {
+	color: #000000;
+	text-decoration: none;
+	a {
+		color: #000000;
+		text-decoration: none;
+		&:hover {
+			// color: blue;
+		}
+	}
 }
 
 
