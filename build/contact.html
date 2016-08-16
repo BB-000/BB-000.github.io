@@ -72,48 +72,52 @@
 <!-- </div>  -->
 </header>
 
-<div id="main-content"><div class="bg-splash">
-	<div class="container">
-		<div class="wrapper-100 center">
-			<h1 class="heading">
-			Barnaby Clegg
-			</h1>
-			
-			<p class="b-intro">
-				Human, artist, musician, explorer, FrontEnd web developer by trade.
-			</p>
-		</div>
+<div id="main-content">
+<div class="container">
+    <div class="wrapper-100">
+        
+        <?php
+        $action=$_REQUEST['action'];
+        if ($action=="")    /* display the contact form */
+            {
+            ?>
+            <form  action="" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="action" value="submit">
+            Your name:<br>
+            <input name="name" type="text" value="" size="30"/><br>
+            Your email:<br>
+            <input name="email" type="text" value="" size="30"/><br>
+            Your message:<br>
+            <textarea name="message" rows="7" cols="30"></textarea><br>
+            <input type="submit" value="Send email"/>
+            </form>
+            <?php
+            } 
+        else                /* send the submitted data */
+            {
+            $name=$_REQUEST['name'];
+            $email=$_REQUEST['email'];
+            $message=$_REQUEST['message'];
+            if (($name=="")||($email=="")||($message==""))
+                {
+                echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+                }
+            else{        
+                $from="From: $name<$email>\r\nReturn-path: $email";
+                $subject="Message sent using your contact form";
+                mail("barnabyclegg@live.co.uk", $subject, $message, $from);
+                echo "Email sent!";
+                }
+            }  
+        ?>
 
-		<div class="wrapper-container mobile-padding with-margin">
 
-			<a href="projects.html" class="wrapper-50 l-card bg-project">
-				<h2 class="l-title">Projects</h2>
-			</a>
 
-			<a href="cv.html" class="wrapper-50 l-card bg-cv">
-				<h2 class="l-title">CV</h2>
-			</a>
+        
+    </div>
+</div>
 
-		</div>
-<!-- 
-		<div class="wrapper-container mobile-padding with-margin">
-			<div class="wrapper-50 l-card">
-				<h2>Projects</h2>
-				<img src="assets/images/aa_code2.jpeg" alt="projects">
-			</div>
-			<div class="wrapper-50 l-card">
-				<h2>CV</h2>
-				<img src="assets/images/aa_cv1.jpeg" alt="cv">
-			</div>
-		</div> -->
 
-		<p class="footnote margin-bottom">Art and music sections coming soon...</p>
-
-	</div>
-</div><!-- end container -->
-<!--Helper to include scripts in the footer for this page only -->
-<!--Helper to include JQuery in the footer for this page only.
-Note: $(function() already called -->
 </div><!-- end main-content-->
 <footer class="footer bg-main1">
 <div class="padded-content">
@@ -142,16 +146,12 @@ Note: $(function() already called -->
 
 <script>window.jQuery || document.write('<script src="assets/scripts/jquery-1.11.3.min.js"><\/script>')</script>
 
- 
-	
 
 <!-- For any custom JS -->
 <script src="assets/scripts/custom.js?v=1.0" type="text/javascript"></script>
 
 <script>
 $(function() {
-	 
-	
 	
 })
 </script>
