@@ -47,6 +47,13 @@ p, ul, ol {
 	font-weight:300;
 }
 
+a {
+	color: $link;
+	&:hover {
+		color: #000000;
+	}
+}
+
 .heading {
 	padding-bottom: $setSpacing*2;
 	font-family: $snazzyFont;
@@ -282,13 +289,20 @@ form {
 
 .p-link {
 	display: inline-block;
-	color: blue;
+	// color: blue;
 	cursor: pointer;
 	text-decoration: none;
 	&:hover {
 		color: #000000;
 	}
 }
+
+// .link-txt {
+// 	color: $bloo;
+// 	&:hover {
+// 		color: #000000;
+// 	}
+// }
 
 
 //cv//
@@ -446,6 +460,11 @@ form {
 	p {
 		margin-bottom: $setSpacing/2;
 	}
+	&.narrow .project {
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .project {
@@ -453,7 +472,7 @@ form {
 
 	img {
 		margin-bottom: 24px;
-	    width: 750px;
+	    width: 850px;
 	    margin: 0 auto $setSpacing*2 auto;
 	    display: block;
 	}

@@ -1,6 +1,6 @@
 <%= partial "header" %>
 <div class="container">
-	<div class="wrapper-100 mobile-padding projects">
+	<div class="wrapper-100 mobile-padding projects narrow">
 		<h1>Projects</h1>
 
 		<section>
@@ -9,22 +9,22 @@
 			<section class="project">
 
 				<div class="center">
-					<a class="p-link" href="http://bb-000.github.io/Axolotl-Bass-in-Space/" target="_blank">
 					<h2 class="project-title">
 						Axolotl Bass in Space
 					</h2>
 					<p class="p-sub">
 						Browser based generative audio game.
 					</p>
-					<p>Play here in new tab &rsaquo;</p>
-					<img src="assets/images/screenshot-axolotl.jpg" alt="screenshot">
+					<a class="p-link" href="http://bb-000.github.io/Axolotl-Bass-in-Space/" target="_blank">
+						<p>Play here in new tab &rsaquo;</p>
+						<img src="assets/images/screenshot-axolotl.jpg" alt="screenshot">
 					</a>
-					<p>
-						Axolotl Bass in Space is an arcade style top down shooter, where the player creates a Psytrance track. The gameplay centres on survival, destroying enemies and collecting assets which results in track composition:
-					</p>
 				</div>
+	
+				<p>
+					Axolotl Bass in Space is an arcade style top down shooter, where the player creates a Psytrance track. The gameplay centres on survival, destroying enemies and collecting assets which results in track composition:
+				</p>
 
-				
 				<ul class="indent margin-bottom">
 					<li>Shooting triggers arpeggiated notes.</li>
 					<li>Different weapons have different sounds and timings.</li>
@@ -50,13 +50,13 @@
 			<section class="project">
 
 				<div class="center">
+					<h2 class="project-title">
+						Interactive 3D Model Gallery
+					</h2>
+					<p class="p-sub">
+						Website showing a gallery of 3D models created in 3DS Max / Maya 
+					</p>
 					<a class="p-link" href="https://bb-000.github.io/3D-Gallery" target="_blank">
-						<h2 class="project-title">
-							Interactive 3D Model Gallery
-						</h2>
-						<p class="p-sub">
-							Website showing a gallery of 3D models created in 3DS Max / Maya 
-						</p>
 						<p>Open here in new tab &rsaquo;</p>
 						<img src="assets/images/screenshot-3D.jpg" alt="screenshot">
 					</a>
@@ -69,19 +69,20 @@
 			<section class="project">
 				
 				<div class="center">
+					<h2 class="project-title">
+						Webcam motion sampler
+					</h2>
+					<p class="p-sub">
+						Motion sensitive interactive audio sampler.</br>Works best in Google Chrome.
+					</p>
 					<a class="p-link" href="https://bb-000.github.io/WebcamSampler/" target="_blank">
-						<h2 class="project-title">
-							Webcam motion sampler
-						</h2>
-						<p class="p-sub">
-							Motion sensitive interactive audio sampler.</br>Works best in Google Chrome.
-						</p>
 						<p>Open here in new tab &rsaquo;</p>
+						<img src="assets/images/screenshot-sampler.jpg" alt="screenshot">
 					</a>
 				</div>
 
 				<p class="p-info">
-					Javascript motion sensitive sampler. Web audio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae molestiae doloribus officia temporibus fuga sit tenetur unde reprehenderit, delectus assumenda. Tempore modi voluptas eius commodi distinctio quam magnam deserunt voluptate.
+					Uses the HTML canvas and webcam input to create a motion sensitive audio sampler. Using javascript and the Wed audio API, I set up the triggers onscreen to play a b when the user touches the virtual images. This is calculated using a blend mode difference  The triggers can be clicked on with the mouse to cycle through a bank of available noises. I also built a tape delay effect with feedback and a filter, which the user can control the parameters of.
 				</p>
 			</section>
 		</section>
