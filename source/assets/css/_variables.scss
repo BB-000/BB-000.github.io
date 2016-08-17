@@ -93,13 +93,15 @@ $setSpacing: 12px; /*Set global spacing*/
 $c1: #240f27;
 
 $bg1: #59566b;
+$bg1lite: lighten($bg1, 60%);
 
 $orange:#ff7b27;
 $red:#e61919;
 $blue:#0000ff;
 $bloo:#2B8CD2;
+$green:#6bbd2f;
 
-$link: $red;
+$link: #6b6bd4;
 
 /*Universal Classes*/
 .primary-font {font-family:$primaryFont!important;}

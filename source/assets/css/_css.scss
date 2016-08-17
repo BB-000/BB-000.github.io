@@ -22,13 +22,13 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 
 h1, .h1 {
 	font-size: 50px;
-    line-height: 55px;
+    line-height: 1.4;
 	padding: $setSpacing*2 0;
 }
 
 h2, .h2 {
 	font-size: 34px;
-  	line-height: 38px;
+  	line-height: 1.4;
 	padding:0 0 $setSpacing/2 0;
 }
 
@@ -62,6 +62,10 @@ a {
 .b-intro {
 	font-family: $snazzyFont;
 	font-size: 24px;
+}
+
+.snazzy {
+	font-family: $snazzyFont;
 }
 
 .float-right {
@@ -497,6 +501,57 @@ form {
 }
 
 
+//// form  /// 
+.form-wrap {
+
+	// margin-top: $setSpacing*2;
+
+	form {
+		position: relative;
+	    width: 100%;
+	    max-width: 500px;
+	    margin: 0 auto;
+	    padding: 0 $setSpacing*2;
+
+	}
+
+	input, textarea {
+		width: 100%;
+		margin-bottom: $setSpacing;
+	}
+
+	.btn-go {
+		width: 50%;
+	}
+
+	textarea {
+
+	}
+
+	.mail {
+		display: block;
+		margin-bottom: $setSpacing*2;
+	}
+}
+
+input, textarea {
+	background-color: $bg1lite;
+    border: 1px solid $bg1;
+    padding: $setSpacing;
+    border-radius: 5px;
+}
+
+.btn-go {
+	background-color: $green;
+	color:#ffffff;
+	transition: all 0.3s;
+	&:hover {
+		background-color: darken($green, 10%);
+		color:#ffffff;
+	}
+}
+
+
 footer {
 	float:left;
 	width:100%;
@@ -512,11 +567,12 @@ footer {
 		}
 	}
 
-	.icon-mail {
-		display: block;
-		margin: 0 auto;
-		width: 24px;
-	}
+}
+
+.icon-mail {
+	display: block;
+	margin: 0 auto;
+	width: 24px;
 }
 
 .copy {
