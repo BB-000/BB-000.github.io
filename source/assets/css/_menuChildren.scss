@@ -144,8 +144,8 @@ label.menuTitle {
 	// @include primaryFontSemiBold();
 }
 
-.mainMenu > ul {
-	// margin-top: $setSpacing;
+.mainMenu li:last-child a {
+	margin-bottom: 3px;
 }
 	
 // label.menuTitle {
@@ -170,20 +170,17 @@ label.menuTitle {
 	}
 
 	.mainMenu a, .mainMenu a:visited {
-		padding:$setSpacing/2 6px;
+		padding:$setSpacing/2 $setSpacing;
 		font-size:15px;
 		background:none;
 	}
 
-	.mainMenu > ul {
-		margin-top: 0;
-	}
-
 	.mainMenu li {
-	border:0;
+		border:0;
 
 		&:last-child a {
-			padding:$setSpacing/2 0 $setSpacing/2 $setSpacing/2;
+			padding:$setSpacing/2 0 $setSpacing/2 $setSpacing;
+			margin-bottom: 0;
 		}
 	}
 }

@@ -96,6 +96,7 @@ $c1: #240f27;
 
 $bg1: #59566b;
 $bg1lite: lighten($bg1, 60%);
+$bgWhite: #f7f7f7;
 
 $orange:#ff7b27;
 $red:#e61919;
@@ -120,6 +121,19 @@ $link: #6b6bd4;
     font-weight: normal;
     font-style: normal;
 }*/
+
+.v-centre {
+  // @include viewport(768) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  // }
+}
 
 .bg-main1 {
   background: $c1;

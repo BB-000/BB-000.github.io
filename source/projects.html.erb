@@ -13,10 +13,11 @@
 						Axolotl Bass in Space
 					</h2>
 					<p class="p-sub">
-						Browser based generative audio game.
+						Browser based generative audio game</br>
+						Currently desktop only
 					</p>
 					<a class="p-link" href="http://bb-000.github.io/Axolotl-Bass-in-Space/" target="_blank">
-						<p>Play here in new tab &rsaquo;</p>
+						<p>Open in new tab &rsaquo;</p>
 						<img src="assets/images/screenshot-axolotl.jpg" alt="screenshot">
 					</a>
 				</div>
@@ -36,11 +37,7 @@
 				</ul>
 
 				<p>
-					The game engine is built using pure Javascript and uses the Web Audio API, along with HTML5 and CSS3 for embedding the game and the user interface. Browser-based games allow multi-platform, easily accessible play. 
-				</p>
-
-				<p>
-					All sound elements must be consistently and accurately synchronised with each other and the graphics. This is done by having a main scheduler function, which is kept in time by combining the less accurate ‘setTimeout’ and ‘requestAnimationFrame’ with the precision of the Web Audio clock. This implementation allows parameters and events to be changed and rescheduled accurately in real time.
+					The game engine is built using pure Javascript and uses the Web Audio API, along with HTML5 and CSS3 for embedding the game and the user interface. Sound elements are synchronised with the graphics using setTimeout and requestAnimationFrame along with the even more precise Web Audio clock. This allows parameters and events to be changed and rescheduled accurately in real time.
 				</p>
 
 
@@ -57,12 +54,12 @@
 						Website showing a gallery of 3D models created in 3DS Max / Maya 
 					</p>
 					<a class="p-link" href="https://bb-000.github.io/3D-Gallery" target="_blank">
-						<p>Open here in new tab &rsaquo;</p>
+						<p>Open in new tab &rsaquo;</p>
 						<img src="assets/images/screenshot-3D.jpg" alt="screenshot">
 					</a>
 				</div>
 
-				<p>A website built using Bootstrap and custom JS. Uses the canvas and X3DOM to display 3D models which I built using 3D modelling software. Objects can be viewed and moved around with the mouse, and interacted with further by using the buttons at the bottom of the viewbox. These buttons include a function to display different render modes and to animate the object.</p>
+				<p>A website built using Bootstrap and custom JavaScript. Uses the canvas and X3DOM to display 3D models which I built using 3D modelling software. Objects can be viewed and moved around with the mouse, and interacted with further by using the buttons at the bottom of the viewbox. These buttons include a function to display different render modes and to animate the object.</p>
 			</section>
 			
 			<!-- <div class="wrapper-50"> -->
@@ -73,16 +70,16 @@
 						Webcam motion sampler
 					</h2>
 					<p class="p-sub">
-						Motion sensitive interactive audio sampler.</br>Works best in Google Chrome.
+						Motion sensitive interactive audio sampler</br>Works best in Google Chrome
 					</p>
 					<a class="p-link" href="https://bb-000.github.io/WebcamSampler/" target="_blank">
-						<p>Open here in new tab &rsaquo;</p>
+						<p>Open in new tab &rsaquo;</p>
 						<img src="assets/images/screenshot-sampler.jpg" alt="screenshot">
 					</a>
 				</div>
 
 				<p class="p-info">
-					Uses the HTML canvas and webcam input to create a motion sensitive audio sampler. Using javascript and the Wed audio API, I set up the triggers onscreen to play a b when the user touches the virtual images. This is calculated using a blend mode difference  The triggers can be clicked on with the mouse to cycle through a bank of available noises. I also built a tape delay effect with feedback and a filter, which the user can control the parameters of to create fun feedback effects.
+					Uses the HTML canvas and webcam input to create a motion sensitive audio sampler. Using JavaScript and the Web Audio API I set up the triggers onscreen to play a sound when the user touches the virtual images. This is calculated using a blend mode difference that compares each pixels colour difference between frames. The triggers can be clicked on with the mouse to cycle through a bank of available noises. I also built a tape delay effect with feedback and a filter, which the user can control the parameters of to create fun feedback effects.
 				</p>
 			</section>
 		</section>
